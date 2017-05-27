@@ -13,16 +13,14 @@ myWebApp.controller('timeLineController', ['$rootScope', '$scope', '$location', 
 	}
 	
 	function addTweet(){
-		if($scope.user.description){
-			var tweet={
-			 id: $scope.user.id,
-			 name: $scope.user.name,
-			 profile_image: $scope.user.image,
-			 description: $scope.user.description,
-			}
-			$scope.timeLinedata.unshift(tweet);
-			$scope.user.description = "";
+		var tweet={
+		 id: $scope.user.id,
+		 name: $scope.user.name,
+		 profile_image: $scope.user.image,
+		 description: $scope.user.description,
 		}
+		$scope.timeLinedata.unshift(tweet);
+		$scope.user.description = "";
 	}
 	
 	function handleSuccess(responseObj){
