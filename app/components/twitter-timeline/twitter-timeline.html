@@ -35,14 +35,14 @@
 		<!-- second column i.e Tweet Timeline column starts here -->
 		<section class="timeline-section column-default">
 			<div class="twitter-compose">
-				<form class="form-horizontal" role="form" name="">
+				<form class="form-horizontal" role="form" name="composeTweetForm">
 					<div class="tweet-container">
 						<div class="tweet-thumb"><img src="{{user.image}}" width="50" height="50" /></div>
 						<div class="tweet-content-container">
 							<div>
-								<input type="text" maxlength="140" ng-model="user.description" class="input-compose">
+								<input type="text" maxlength="140" ng-model="user.description" required class="input-compose">
 							</div>
-							<button class="btn-blue pull-right" type="submit" ng-click="addTweet();">Tweet</button>
+							<input class="btn-blue pull-right" type="button" ng-disabled="composeTweetForm.$invalid" value="Compose Tweet" ng-click="addTweet();"/>
 						</div>
 					</div>
 				</form>
