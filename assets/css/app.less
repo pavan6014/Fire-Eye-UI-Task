@@ -1,0 +1,353 @@
+/** Resetting all of our HTML Elements starts here **/
+html, body {
+	border: 0;
+	font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	background:#f5f8fa;
+}
+
+div, span, object, iframe, img, table, caption, thead, tbody,
+tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
+nav, footer, header, section, summary, mark, audio, video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
+del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+ol, ul, li, fieldset, legend, label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  caption, th, td {
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+
+a img {
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+/** Resetting all of our HTML Elements ends here **/
+
+
+@color_1: #0084B4;
+@color_2: #66757f;
+@color_3: #14171a;
+@color_4: #657786;
+@color_5: #1DA1F2;
+@color_6: #fff;
+@background_color_1: #1DA1F2;
+@background_color_2: #fff;
+@border_color_1: #2e6da4;
+
+
+a {
+	&:link {
+		color: @color_1;
+	}
+}
+
+/* Layout (header, navigation, three column layout) styles here */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+header {
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+	height: 50px;
+}
+
+.container {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.column-default {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.profile-section {
+	width: 25%;
+	min-height: 50px;
+	float: left;
+}
+
+.timeline-section {
+	width: 50%;
+	float: left;
+}
+
+.follow-section {
+	width: 25%;
+	min-height: 50px;
+	float: left;
+	.tweet-container {
+		margin-top: 0.8em;
+	}
+}
+
+.main-section {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.twitter-compose {
+	background: #E8F5FD;
+	min-height: 50px;
+	border-radius: 4px 4px 0 0;
+	border: 1px solid #e4e4e4;
+	padding: 20px;
+	overflow: auto;
+}
+
+.input-compose {
+	border-radius: 4px;
+	font-size: 14px;
+	padding: 8px 30px 8px 8px;
+	width: 100%;
+	border: 1px solid #A4D9F9;
+	margin-bottom: 15px;
+	min-height: 50px;
+}
+
+
+/* Main Navigation styles Starts Here */
+.nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		display: inline-block;
+		margin: 0;
+	}
+	a {
+		display: block;
+		color: @color_1;
+		padding: 1em;
+		text-decoration: none;
+		font-size: 14px;
+		&:link {
+			color: @color_2;
+		}
+		&:hover {
+			color: @color_1;
+			border-bottom: 2px solid #0084B4;
+		}
+		&:active {
+			color: @color_1;
+			border-bottom: 2px solid #0084B4;
+		}
+	}
+	img {
+		width: 13px;
+		height: 13px;
+	}
+}
+/* Main Navigation styles ends Here */
+
+.radius-module {
+	border-radius: 6px;
+	margin-bottom: 10px;
+	border: 1px solid #e6ecf0;
+	background: #fff;
+	padding: 1em;
+	overflow: auto;
+}
+.bg-blue {
+	background-color: @background_color_1;
+	height: 95px;
+}
+
+
+/* Tweet line styles Starts Here */
+.tweet {
+	min-height: 50px;
+	padding: 1em;
+	border: 1px solid #e6ecf0;
+	background: #fff;
+	&:hover {
+		background: transparent;
+	}
+	&:first-child {
+		border-radius: 10px 10px 0 0;
+		border: 1px solid #e4e4e4;
+	}
+}
+.tweet-thumb {
+	float: left;
+	img {
+		display: block;
+	}
+}
+.tweet-content-container {
+	margin-left: 4em;
+}
+.tweet-title {
+	color: @color_3;
+	font-size: 14px;
+	font-weight: bold;
+}
+.tweet-text {
+	font-size: 14px;
+	line-height: 20px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+.profile-container {
+	padding: 0 1em 1em 1em;
+	.tweet-thumb {
+		margin-top: -20px;
+		margin-left: -5px;
+	}
+	.tweet-content-container {
+		margin-left: 65px;
+	}
+	.tweet-title {
+		font-size: 18px;
+	}
+	.tweet-id {
+		font-size: 14px;
+		color: @color_4;
+	}
+	a.label-txt {
+		color: @color_4;
+		font-size: 12px;
+		text-decoration: none;
+		&:hover {
+			color: @color_5;
+		}
+	}
+	a.label-value {
+		color: @color_5;
+		text-decoration: none;
+	}
+}
+/* Tweet line styles ends Here */
+
+/* Few common styles starts here*/
+.bg-primary {color: #fff;background: #337ab7;padding: 15px;margin-top:15px;}
+.btn-blue {
+	color: @color_6;
+	background: #0084B4;
+	border-color: @border_color_1;
+	padding: 9px 16px 8px 17px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.clr-bth {
+	clear: both;
+}
+.text-center {
+	text-align: center;
+}
+.no-padding {
+	padding: 0px;
+}
+.mar-top-20 {
+	margin-top: 20px;
+}
+.mar-right-10 {
+	margin-right: 10px;
+}
+.follow-btn {
+	font-size: 12px;
+	line-height: 16px;
+	padding: 4px 8px 4px 8px;
+	background-color: @background_color_2;
+	border: 1px solid #1da1f2;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.follow-head-txt {
+	font-size: 18px;
+	color: @color_2;
+	font-weight: 300px;
+}
+/* Few common styles ends here*/
+
+
+/* Media CSS starts here to make APP responsive */
+@media screen and (min-device-width: 767px) and (max-device-width: 1024px) and (orientation : portrait) {
+	.profile-section {
+		width: 100%;
+	}
+	.timeline-section {
+		width: 100%;
+		margin-top: 15px;
+	}
+	.follow-section {
+		width: 100%;
+		margin-top: 15px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.profile-section {
+		width: 100%;
+	}
+	.timeline-section {
+		width: 100%;
+		margin-top: 15px;
+	}
+	.follow-section {
+		width: 100%;
+		margin-top: 15px;
+	}
+	.nav {
+		a {
+			display: block;
+			&:hover {
+				border-bottom: 0px solid #0084B4;
+			}
+			&:active {
+				border-bottom: 0px solid #0084B4;
+			}
+		}
+		li {
+			display: block;
+		}
+	}
+	header {
+		height: auto;
+	}
+}
+/* Media CSS ends here to make APP responsive */

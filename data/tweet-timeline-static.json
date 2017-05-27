@@ -1,0 +1,23 @@
+[
+    {
+      "id": "@katyperry",
+      "name": "KATY PERRY",
+      "description": "Katheryn Elizabeth Hudson (born October 25, 1984), known professionally as Katy Perry, is an American singer and songwriter.",
+      "url": "https://en.wikipedia.org/wiki/Katy_Perry",
+	  "profile_image": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Katy_Perry_DNC_July_2016_%28cropped%29.jpg/180px-Katy_Perry_DNC_July_2016_%28cropped%29.jpg"
+    },
+	{
+      "id": "@justinbieber",
+      "name": "Justin Bieber",
+      "description": "Justin Drew Bieber (born March 1, 1994) is a Canadian singer and songwriter. ",
+      "url": "https://en.wikipedia.org/wiki/Justin_Bieber",
+	  "profile_image": "//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Justin_Bieber_in_2015.jpg/220px-Justin_Bieber_in_2015.jpg"
+    },
+	{
+      "id": "@BarackObama",
+      "name": "Barack Obama",
+      "description": "Barack Hussein Obama is an American politician who served as the 44th President of the United States from 2009 to 2017.",
+      "url": "https://en.wikipedia.org/wiki/Barack_Obama",
+	  "profile_image": "//upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/220px-President_Barack_Obama.jpg"
+    }
+]

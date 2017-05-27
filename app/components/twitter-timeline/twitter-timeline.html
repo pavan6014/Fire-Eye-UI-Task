@@ -1,0 +1,85 @@
+<!-- Main Section (Three Column Layout) starts here -->
+<div class="container">
+	<div class="row main-section">
+		<!-- First column i.e Dashboard Profile column starts here -->
+		<section class="profile-section column-default">
+			<div class="radius-module no-padding">
+				<div class="bg-blue"></div>
+				<div class="profile-container">
+					<div class="tweet-container">
+						<div class="tweet-thumb"><img src="{{user.image}}" width="60" height="60" /></div>
+						<div class="tweet-content-container">
+							<p class="tweet-title">{{user.name}}</p>
+							<p class="tweet-id">{{user.id}}</p>
+						</div>
+					</div>
+					<div class="clr-bth">
+						<div class="pull-left mar-right-10">
+							<a href="javascript:void();" class="label-txt">Tweets</a> <br/> 
+							<a href="javascript:void();" class="label-value">100</a>
+						</div>
+						<div class="pull-left mar-right-10">
+							<a href="javascript:void();" class="label-txt">Follwing</a> <br/> 
+							<a href="javascript:void();" class="label-value">100</a>
+						</div>
+						<div class="pull-left">
+							<a href="javascript:void();" class="label-txt">Followers</a> <br/>
+							<a href="javascript:void();" class="label-value">100</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- First column i.e Dashboard Profile column ends here -->
+		
+		<!-- second column i.e Tweet Timeline column starts here -->
+		<section class="timeline-section column-default">
+			<div class="twitter-compose">
+				<form class="form-horizontal" role="form" name="">
+					<div class="tweet-container">
+						<div class="tweet-thumb"><img src="{{user.image}}" width="50" height="50" /></div>
+						<div class="tweet-content-container">
+							<div>
+								<input type="text" maxlength="140" ng-model="user.description" class="input-compose">
+							</div>
+							<button class="btn-blue pull-right" type="submit" ng-click="addTweet();">Tweet</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="tweet" ng-repeat="data in timeLinedata">
+				<div class="tweet-container">
+					<div class="tweet-thumb"><img src="{{data.profile_image}}" width="50" height="50"/></div>
+					<div class="tweet-content-container">
+						<p class="tweet-title">{{data.name}}</p>
+						<p class="tweet-text">{{data.description}} <a target="_blank" href="{{data.url}}">{{data.url}}</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- second column i.e Tweet Timeline column ends here -->
+		
+		<!-- Third column i.e Who to Follow column starts here -->
+		<section class="follow-section column-default">
+			<div class="radius-module">
+				<h3 class="follow-head-txt">Who to follow</h3>
+				<div class="tweet-container">
+					<div class="tweet-thumb"><img src="assets/img/Twitter.png" width="50" height="50"/></div>
+					<div class="tweet-content-container">
+						<p class="tweet-title">binay samad</p>
+						<button type="button" class="follow-btn">Follow</button>
+					</div>
+				</div>
+				<div class="tweet-container clr-bth">
+					<div class="tweet-thumb"><img src="assets/img/Twitter.png" width="50" height="50"/></div>
+					<div class="tweet-content-container">
+						<p class="tweet-title">binay samad</p>
+						<button type="button" class="follow-btn">Follow</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Third column i.e Who to Follow column ends here -->
+	</div>
+</div>
+<!-- Main Section (Three Column Layout) ends here -->
