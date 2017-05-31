@@ -8,3 +8,5 @@ Technical Info: HTML5, LESS CSS, Angular, Static Json
 4) Timeline content is loading from JSON file
 5) On click of "Tweet" button, user is able to add new tweet to the page.
 
+
+

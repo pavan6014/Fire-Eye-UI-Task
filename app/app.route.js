@@ -12,6 +12,7 @@ myWebApp.config(['$locationProvider', '$routeProvider', '$httpProvider' , functi
         redirectTo: '/home'
     });
 	
+	
 }]);
 
 
